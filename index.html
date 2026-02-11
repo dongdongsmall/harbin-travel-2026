@@ -1,0 +1,1306 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>哈尔滨冬季家庭旅行攻略 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700;900&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================
+   CSS CUSTOM PROPERTIES & RESET
+   ============================================ */
+:root {
+  --color-deep-navy: #0a1628;
+  --color-midnight: #0f1d35;
+  --color-arctic: #e8f4fd;
+  --color-ice-blue: #a8d8ea;
+  --color-frost: #cce5ff;
+  --color-snow: #f0f7ff;
+  --color-gold: #ffd700;
+  --color-warm-amber: #f5a623;
+  --color-coral: #ff6b6b;
+  --color-emerald: #2ecc71;
+  --color-crystal: rgba(255,255,255,0.08);
+  --color-glass: rgba(255,255,255,0.05);
+  --font-display: 'Noto Serif SC', serif;
+  --font-body: 'Noto Sans SC', sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+  --shadow-card: 0 8px 32px rgba(0,0,0,0.3);
+  --shadow-glow: 0 0 40px rgba(168,216,234,0.15);
+  --transition-smooth: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-deep-navy);
+  color: var(--color-arctic);
+  line-height: 1.8;
+  overflow-x: hidden;
+}
+
+/* ============================================
+   SNOWFALL ANIMATION
+   ============================================ */
+.snowflakes { position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999; overflow: hidden; }
+.snowflake {
+  position: absolute; top: -10px; color: #fff; font-size: 1em; animation: snowfall linear infinite;
+  opacity: 0.7; text-shadow: 0 0 5px rgba(255,255,255,0.5);
+}
+@keyframes snowfall {
+  0% { transform: translateY(-10vh) rotate(0deg) translateX(0); }
+  25% { transform: translateY(25vh) rotate(90deg) translateX(15px); }
+  50% { transform: translateY(50vh) rotate(180deg) translateX(-10px); }
+  75% { transform: translateY(75vh) rotate(270deg) translateX(20px); }
+  100% { transform: translateY(110vh) rotate(360deg) translateX(-5px); }
+}
+
+/* ============================================
+   NAVIGATION
+   ============================================ */
+.nav {
+  position: fixed; top: 0; left: 0; width: 100%; z-index: 1000;
+  background: rgba(10,22,40,0.85); backdrop-filter: blur(20px) saturate(180%);
+  border-bottom: 1px solid rgba(168,216,234,0.1);
+  transition: var(--transition-smooth);
+}
+.nav.scrolled { background: rgba(10,22,40,0.95); box-shadow: 0 4px 30px rgba(0,0,0,0.3); }
+.nav-inner {
+  max-width: 1200px; margin: 0 auto; padding: 0 24px;
+  display: flex; align-items: center; justify-content: space-between; height: 64px;
+}
+.nav-logo { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--color-ice-blue); display: flex; align-items: center; gap: 8px; }
+.nav-logo span { font-size: 1.4rem; }
+.nav-links { display: flex; gap: 4px; flex-wrap: wrap; }
+.nav-links a {
+  color: var(--color-frost); text-decoration: none; font-size: 0.85rem; font-weight: 400;
+  padding: 6px 14px; border-radius: 20px; transition: var(--transition-smooth);
+  white-space: nowrap;
+}
+.nav-links a:hover, .nav-links a.active { background: rgba(168,216,234,0.15); color: #fff; }
+.nav-toggle { display: none; background: none; border: none; color: var(--color-ice-blue); font-size: 1.5rem; cursor: pointer; }
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+.hero {
+  position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center;
+  background: linear-gradient(135deg, #0a1628 0%, #1a3a5c 30%, #0f2847 60%, #0a1628 100%);
+  overflow: hidden;
+}
+.hero::before {
+  content: ''; position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 30% 20%, rgba(168,216,234,0.08) 0%, transparent 60%),
+              radial-gradient(ellipse at 70% 80%, rgba(100,180,255,0.05) 0%, transparent 50%);
+}
+.hero-aurora {
+  position: absolute; top: 0; left: 0; width: 100%; height: 60%;
+  background: linear-gradient(180deg, rgba(100,200,255,0.03) 0%, transparent 100%);
+  animation: aurora 8s ease-in-out infinite alternate;
+}
+@keyframes aurora {
+  0% { opacity: 0.3; transform: translateX(-5%) scaleY(1); }
+  100% { opacity: 0.6; transform: translateX(5%) scaleY(1.1); }
+}
+.hero-content { position: relative; z-index: 2; text-align: center; padding: 24px; max-width: 900px; }
+.hero-badge {
+  display: inline-block; padding: 8px 24px; border-radius: 30px; font-size: 0.85rem; font-weight: 500;
+  background: rgba(168,216,234,0.1); border: 1px solid rgba(168,216,234,0.2);
+  color: var(--color-ice-blue); margin-bottom: 24px; letter-spacing: 2px;
+}
+.hero h1 {
+  font-family: var(--font-display); font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900; line-height: 1.2; margin-bottom: 20px;
+  background: linear-gradient(135deg, #fff 0%, var(--color-ice-blue) 50%, #88c8e8 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-subtitle {
+  font-size: clamp(1rem, 2vw, 1.3rem); color: rgba(232,244,253,0.7);
+  font-weight: 300; margin-bottom: 40px; line-height: 1.8;
+}
+.hero-stats {
+  display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; margin-top: 40px;
+}
+.hero-stat { text-align: center; }
+.hero-stat-value {
+  font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--color-gold);
+}
+.hero-stat-label { font-size: 0.85rem; color: rgba(232,244,253,0.5); margin-top: 4px; }
+.hero-cta {
+  display: inline-flex; align-items: center; gap: 10px; margin-top: 32px;
+  padding: 16px 36px; border-radius: 50px; font-size: 1rem; font-weight: 600;
+  background: linear-gradient(135deg, var(--color-ice-blue), #5ba3c9);
+  color: var(--color-deep-navy); text-decoration: none;
+  transition: var(--transition-smooth); border: none; cursor: pointer;
+}
+.hero-cta:hover { transform: translateY(-3px); box-shadow: 0 10px 40px rgba(168,216,234,0.3); }
+.scroll-indicator {
+  position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);
+  animation: bounce 2s ease-in-out infinite; color: rgba(168,216,234,0.5); font-size: 1.5rem;
+}
+@keyframes bounce { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(-10px); } }
+
+/* ============================================
+   SECTION STYLES
+   ============================================ */
+.section { padding: 100px 24px; max-width: 1200px; margin: 0 auto; }
+.section-dark { background: var(--color-midnight); }
+.section-header { text-align: center; margin-bottom: 64px; }
+.section-icon { font-size: 2.5rem; margin-bottom: 16px; display: block; }
+.section-title {
+  font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700; margin-bottom: 16px;
+  background: linear-gradient(135deg, #fff, var(--color-ice-blue));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.section-desc { font-size: 1.05rem; color: rgba(232,244,253,0.6); max-width: 700px; margin: 0 auto; }
+
+/* ============================================
+   CARDS
+   ============================================ */
+.cards-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+}
+.card {
+  background: linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border: 1px solid rgba(168,216,234,0.1); border-radius: var(--radius-lg);
+  padding: 32px; transition: var(--transition-smooth); position: relative; overflow: hidden;
+}
+.card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--color-ice-blue), var(--color-gold), var(--color-coral));
+  opacity: 0; transition: var(--transition-smooth);
+}
+.card:hover { transform: translateY(-6px); border-color: rgba(168,216,234,0.25); box-shadow: var(--shadow-glow); }
+.card:hover::before { opacity: 1; }
+.card-icon { font-size: 2.5rem; margin-bottom: 16px; display: block; }
+.card-title { font-family: var(--font-display); font-size: 1.3rem; font-weight: 700; margin-bottom: 12px; color: #fff; }
+.card-content { color: rgba(232,244,253,0.7); font-size: 0.95rem; line-height: 1.9; }
+.card-content ul { list-style: none; padding: 0; margin-top: 12px; }
+.card-content li { padding: 6px 0; padding-left: 20px; position: relative; }
+.card-content li::before { content: '•'; position: absolute; left: 0; color: var(--color-ice-blue); font-weight: bold; }
+
+/* ============================================
+   TAG BADGES
+   ============================================ */
+.tag { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 500; margin: 2px; }
+.tag-blue { background: rgba(168,216,234,0.15); color: var(--color-ice-blue); }
+.tag-gold { background: rgba(255,215,0,0.15); color: var(--color-gold); }
+.tag-coral { background: rgba(255,107,107,0.15); color: var(--color-coral); }
+.tag-green { background: rgba(46,204,113,0.15); color: var(--color-emerald); }
+
+/* ============================================
+   TIMELINE
+   ============================================ */
+.timeline { position: relative; padding-left: 40px; }
+.timeline::before {
+  content: ''; position: absolute; left: 15px; top: 0; bottom: 0; width: 2px;
+  background: linear-gradient(180deg, var(--color-ice-blue), rgba(168,216,234,0.1));
+}
+.timeline-item { position: relative; margin-bottom: 40px; }
+.timeline-dot {
+  position: absolute; left: -33px; top: 6px; width: 14px; height: 14px;
+  border-radius: 50%; background: var(--color-ice-blue);
+  box-shadow: 0 0 20px rgba(168,216,234,0.4);
+}
+.timeline-time { font-size: 0.85rem; color: var(--color-gold); font-weight: 600; margin-bottom: 4px; }
+.timeline-title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+.timeline-desc { color: rgba(232,244,253,0.65); font-size: 0.95rem; }
+
+/* ============================================
+   ACCORDION
+   ============================================ */
+.accordion { max-width: 800px; margin: 0 auto; }
+.accordion-item {
+  border: 1px solid rgba(168,216,234,0.1); border-radius: var(--radius-md);
+  margin-bottom: 12px; overflow: hidden; background: rgba(255,255,255,0.03);
+  transition: var(--transition-smooth);
+}
+.accordion-item:hover { border-color: rgba(168,216,234,0.2); }
+.accordion-header {
+  padding: 20px 24px; cursor: pointer; display: flex; align-items: center;
+  justify-content: space-between; font-weight: 600; font-size: 1.05rem; color: #fff;
+  transition: var(--transition-smooth); user-select: none;
+}
+.accordion-header:hover { background: rgba(168,216,234,0.05); }
+.accordion-arrow { transition: transform 0.3s ease; font-size: 0.8rem; color: var(--color-ice-blue); }
+.accordion-item.open .accordion-arrow { transform: rotate(180deg); }
+.accordion-body { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+.accordion-body-inner { padding: 0 24px 24px; color: rgba(232,244,253,0.7); font-size: 0.95rem; line-height: 1.9; }
+
+/* ============================================
+   ATTRACTION DETAIL CARDS
+   ============================================ */
+.attraction-detail {
+  background: linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border: 1px solid rgba(168,216,234,0.1); border-radius: var(--radius-xl);
+  padding: 40px; margin-bottom: 32px; position: relative; overflow: hidden;
+}
+.attraction-detail::after {
+  content: ''; position: absolute; top: -50%; right: -20%; width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(168,216,234,0.05), transparent 70%);
+  pointer-events: none;
+}
+.attraction-header { display: flex; align-items: flex-start; gap: 20px; margin-bottom: 24px; flex-wrap: wrap; }
+.attraction-emoji { font-size: 3rem; flex-shrink: 0; }
+.attraction-info { flex: 1; min-width: 200px; }
+.attraction-name { font-family: var(--font-display); font-size: 1.8rem; font-weight: 700; color: #fff; margin-bottom: 8px; }
+.attraction-meta { display: flex; gap: 16px; flex-wrap: wrap; font-size: 0.85rem; color: rgba(232,244,253,0.5); }
+.attraction-meta span { display: flex; align-items: center; gap: 4px; }
+.attraction-body { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.attraction-section h4 { color: var(--color-ice-blue); font-size: 1rem; margin-bottom: 12px; font-weight: 600; }
+.attraction-section p, .attraction-section li { color: rgba(232,244,253,0.7); font-size: 0.9rem; line-height: 1.8; }
+.attraction-section ul { list-style: none; padding: 0; }
+.attraction-section li { padding: 4px 0; padding-left: 16px; position: relative; }
+.attraction-section li::before { content: '→'; position: absolute; left: 0; color: var(--color-gold); }
+.attraction-tips {
+  margin-top: 24px; padding: 20px; border-radius: var(--radius-md);
+  background: rgba(255,215,0,0.05); border: 1px solid rgba(255,215,0,0.15);
+}
+.attraction-tips h4 { color: var(--color-gold); margin-bottom: 8px; }
+.attraction-tips p { color: rgba(232,244,253,0.7); font-size: 0.9rem; }
+
+/* ============================================
+   TEMPERATURE CHART
+   ============================================ */
+.temp-chart {
+  display: flex; align-items: flex-end; justify-content: center; gap: 20px;
+  padding: 40px 20px; height: 280px; flex-wrap: wrap;
+}
+.temp-bar-wrap { text-align: center; flex: 0 0 60px; }
+.temp-bar {
+  width: 40px; margin: 0 auto; border-radius: 20px 20px 4px 4px;
+  background: linear-gradient(180deg, var(--color-coral), var(--color-ice-blue));
+  transition: var(--transition-smooth); position: relative;
+  min-height: 20px;
+}
+.temp-bar:hover { transform: scaleY(1.05); box-shadow: 0 0 20px rgba(168,216,234,0.3); }
+.temp-value { font-size: 0.8rem; font-weight: 700; color: var(--color-frost); margin-bottom: 8px; }
+.temp-label { font-size: 0.75rem; color: rgba(232,244,253,0.5); margin-top: 8px; }
+
+/* ============================================
+   CHECKLIST
+   ============================================ */
+.checklist { max-width: 700px; margin: 0 auto; }
+.checklist-category { margin-bottom: 32px; }
+.checklist-cat-title { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--color-gold); margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+.checklist-item {
+  display: flex; align-items: center; gap: 12px; padding: 12px 16px;
+  border-radius: var(--radius-sm); cursor: pointer; transition: var(--transition-smooth);
+}
+.checklist-item:hover { background: rgba(168,216,234,0.05); }
+.checklist-box {
+  width: 22px; height: 22px; border: 2px solid rgba(168,216,234,0.3);
+  border-radius: 6px; flex-shrink: 0; display: flex; align-items: center;
+  justify-content: center; transition: var(--transition-smooth); font-size: 0.7rem; color: transparent;
+}
+.checklist-item.checked .checklist-box {
+  background: var(--color-emerald); border-color: var(--color-emerald); color: #fff;
+}
+.checklist-item.checked .checklist-text { text-decoration: line-through; opacity: 0.5; }
+.checklist-text { font-size: 0.95rem; color: rgba(232,244,253,0.8); }
+.checklist-progress {
+  margin-top: 40px; text-align: center;
+}
+.progress-bar-bg {
+  width: 100%; height: 8px; background: rgba(168,216,234,0.1);
+  border-radius: 4px; overflow: hidden; margin-top: 12px;
+}
+.progress-bar-fill {
+  height: 100%; background: linear-gradient(90deg, var(--color-ice-blue), var(--color-emerald));
+  border-radius: 4px; transition: width 0.5s ease; width: 0%;
+}
+.progress-text { font-size: 0.9rem; color: rgba(232,244,253,0.6); }
+
+/* ============================================
+   TABS
+   ============================================ */
+.tabs-nav { display: flex; gap: 4px; margin-bottom: 32px; flex-wrap: wrap; justify-content: center; }
+.tab-btn {
+  padding: 10px 24px; border-radius: 30px; border: 1px solid rgba(168,216,234,0.15);
+  background: transparent; color: var(--color-frost); font-size: 0.9rem; cursor: pointer;
+  transition: var(--transition-smooth); font-family: var(--font-body);
+}
+.tab-btn:hover { background: rgba(168,216,234,0.1); }
+.tab-btn.active { background: rgba(168,216,234,0.2); border-color: var(--color-ice-blue); color: #fff; }
+.tab-content { display: none; animation: fadeIn 0.4s ease; }
+.tab-content.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ============================================
+   FOOTER
+   ============================================ */
+.footer {
+  text-align: center; padding: 60px 24px; border-top: 1px solid rgba(168,216,234,0.1);
+  background: linear-gradient(180deg, var(--color-deep-navy), #060d1a);
+}
+.footer-text { color: rgba(232,244,253,0.4); font-size: 0.85rem; line-height: 2; }
+.footer-heart { color: var(--color-coral); }
+
+/* ============================================
+   RESPONSIVE
+   ============================================ */
+@media (max-width: 768px) {
+  .nav-links { display: none; position: absolute; top: 64px; left: 0; width: 100%; background: rgba(10,22,40,0.95); padding: 16px; flex-direction: column; border-top: 1px solid rgba(168,216,234,0.1); }
+  .nav-links.open { display: flex; }
+  .nav-toggle { display: block; }
+  .hero-stats { gap: 24px; }
+  .attraction-body { grid-template-columns: 1fr; }
+  .section { padding: 60px 16px; }
+  .cards-grid { grid-template-columns: 1fr; }
+  .temp-chart { gap: 10px; }
+  .temp-bar-wrap { flex: 0 0 40px; }
+}
+
+/* ============================================
+   SCROLL REVEAL
+   ============================================ */
+.reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* Back to top */
+.back-to-top {
+  position: fixed; bottom: 30px; right: 30px; width: 48px; height: 48px;
+  border-radius: 50%; background: rgba(168,216,234,0.2); border: 1px solid rgba(168,216,234,0.3);
+  color: var(--color-ice-blue); font-size: 1.2rem; cursor: pointer;
+  display: none; align-items: center; justify-content: center;
+  transition: var(--transition-smooth); z-index: 999; backdrop-filter: blur(10px);
+}
+.back-to-top:hover { background: rgba(168,216,234,0.3); transform: translateY(-3px); }
+.back-to-top.show { display: flex; }
+</style>
+</head>
+<body>
+
+<!-- SNOWFALL -->
+<div class="snowflakes" id="snowflakes"></div>
+
+<!-- NAVIGATION -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo"><span>❄</span> 哈尔滨之旅</div>
+    <button class="nav-toggle" id="navToggle" aria-label="菜单">☰</button>
+    <div class="nav-links" id="navLinks">
+      <a href="#overview">行程概览</a>
+      <a href="#weather">天气穿搭</a>
+      <a href="#attractions">景点攻略</a>
+      <a href="#skiing">滑雪指南</a>
+      <a href="#food">美食推荐</a>
+      <a href="#safety">安全须知</a>
+      <a href="#checklist">行前清单</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-aurora"></div>
+  <div class="hero-content">
+    <div class="hero-badge">2026 · 家庭冬季之旅</div>
+    <h1>哈尔滨 · 雪乡<br>冰雪奇缘之旅</h1>
+    <p class="hero-subtitle">
+      一份为全家精心准备的东北冬季出行完全攻略<br>
+      涵盖穿衣保暖、景点游玩、滑雪技巧、美食推荐与安全须知
+    </p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-value">-20°C</div>
+        <div class="hero-stat-label">平均温度</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-value">6天5夜</div>
+        <div class="hero-stat-label">建议行程</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-value">12+</div>
+        <div class="hero-stat-label">必游景点</div>
+      </div>
+    </div>
+    <a href="#overview" class="hero-cta">开始探索 ↓</a>
+  </div>
+  <div class="scroll-indicator">⌄</div>
+</section>
+
+<!-- OVERVIEW -->
+<div class="section-dark">
+<section class="section" id="overview">
+  <div class="section-header reveal">
+    <span class="section-icon">🗺</span>
+    <h2 class="section-title">行程概览</h2>
+    <p class="section-desc">精心规划的东北冰雪之旅，每一天都充满惊喜</p>
+  </div>
+  <div class="timeline reveal">
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-time">第1天 · 抵达日</div>
+      <div class="timeline-title">哈尔滨接机 → 中央大街 → 索菲亚教堂</div>
+      <div class="timeline-desc">抵达哈尔滨太平国际机场，入住酒店休整后，前往中央大街感受百年老街的欧式风情，参观圣·索菲亚教堂的拜占庭建筑之美。晚餐品尝东北特色铁锅炖，适应寒冷气候。</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-time">第2天 · 冰雪世界</div>
+      <div class="timeline-title">冰雪大世界 → 松花江冰上活动</div>
+      <div class="timeline-desc">全天游览哈尔滨冰雪大世界，欣赏世界级冰雕艺术，体验冰滑梯、雪地摩托等项目。下午前往松花江冰面，体验冰上自行车、狗拉雪橇等趣味活动。</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-time">第3天 · 雪乡之旅</div>
+      <div class="timeline-title">出发前往雪乡 → 雪韵大街 → 梦幻家园</div>
+      <div class="timeline-desc">早起乘车前往中国雪乡（约5-6小时车程），抵达后入住特色雪乡民宿。漫步雪韵大街，观赏"雪蘑菇"奇景，参观梦幻家园，感受童话般的雪乡夜景。</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-time">第4天 · 雪乡深度</div>
+      <div class="timeline-title">羊草山日出 → 雪地徒步 → 马拉爬犁</div>
+      <div class="timeline-desc">清晨登羊草山观赏壮丽日出，体验雪地徒步穿越原始森林。下午乘坐马拉爬犁深入雪原，体验东北传统交通方式，感受林海雪原的壮美。</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-time">第5天 · 滑雪体验</div>
+      <div class="timeline-title">亚布力滑雪场 → 滑雪教学 → 温泉放松</div>
+      <div class="timeline-desc">前往亚布力滑雪度假区，专业教练一对一教学，体验初级/中级雪道。下午泡温泉解除疲劳，感受冰火两重天的独特体验。</div>
+    </div>
+    <div class="timeline-item">
+      <div class="timeline-dot"></div>
+      <div class="timeline-time">第6天 · 返程日</div>
+      <div class="timeline-title">太阳岛 → 东北虎林园 → 返程</div>
+      <div class="timeline-desc">上午游览太阳岛雪博会，参观精美雪雕艺术作品。随后前往东北虎林园近距离观赏东北虎。下午前往机场，带着满满的回忆踏上归途。</div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- WEATHER & CLOTHING -->
+<section class="section" id="weather">
+  <div class="section-header reveal">
+    <span class="section-icon">🌡</span>
+    <h2 class="section-title">天气与穿搭指南</h2>
+    <p class="section-desc">冬季东北气温极低，科学穿衣是舒适出行的关键</p>
+  </div>
+
+  <div class="reveal" style="margin-bottom:48px">
+    <h3 style="font-family:var(--font-display);font-size:1.4rem;text-align:center;margin-bottom:24px;color:var(--color-frost)">哈尔滨2月气温参考</h3>
+    <div class="temp-chart">
+      <div class="temp-bar-wrap"><div class="temp-value">-24°</div><div class="temp-bar" style="height:120px"></div><div class="temp-label">最低</div></div>
+      <div class="temp-bar-wrap"><div class="temp-value">-18°</div><div class="temp-bar" style="height:95px;background:linear-gradient(180deg,#88c8e8,#5ba3c9)"></div><div class="temp-label">平均低</div></div>
+      <div class="temp-bar-wrap"><div class="temp-value">-12°</div><div class="temp-bar" style="height:70px;background:linear-gradient(180deg,#a8d8ea,#88c8e8)"></div><div class="temp-label">平均</div></div>
+      <div class="temp-bar-wrap"><div class="temp-value">-5°</div><div class="temp-bar" style="height:45px;background:linear-gradient(180deg,#cce5ff,#a8d8ea)"></div><div class="temp-label">平均高</div></div>
+      <div class="temp-bar-wrap"><div class="temp-value">0°</div><div class="temp-bar" style="height:25px;background:linear-gradient(180deg,#e8f4fd,#cce5ff)"></div><div class="temp-label">最高</div></div>
+    </div>
+  </div>
+
+  <div class="cards-grid reveal">
+    <div class="card">
+      <span class="card-icon">🧥</span>
+      <h3 class="card-title">上身穿搭 · 三层法则</h3>
+      <div class="card-content">
+        <p><strong style="color:var(--color-ice-blue)">内层（贴身层）：</strong>选择纯棉或速干面料的保暖内衣，推荐羊毛混纺材质。贴身穿着有助于锁住体温，排汗透气。</p>
+        <p style="margin-top:8px"><strong style="color:var(--color-ice-blue)">中层（保暖层）：</strong>羽绒背心或抓绒衣，厚度适中。建议选择轻便但保暖性能好的中层，方便室内外穿脱。</p>
+        <p style="margin-top:8px"><strong style="color:var(--color-ice-blue)">外层（防风层）：</strong>长款羽绒服（充绒量≥250g），务必选择过膝款式。推荐鹅绒填充，防风防水面料，连帽带毛领设计。</p>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-icon">🧤</span>
+      <h3 class="card-title">四肢保暖 · 关键部位</h3>
+      <div class="card-content">
+        <ul>
+          <li><strong>手部：</strong>滑雪手套（防水保暖）+ 薄触屏内手套，方便拍照操作手机</li>
+          <li><strong>脚部：</strong>加厚雪地靴（UGG不适合！推荐防滑保暖的东北雪地靴），搭配羊毛袜2双</li>
+          <li><strong>头部：</strong>毛线帽/雷锋帽 + 围巾/面罩（脖子和脸部保暖极其重要）</li>
+          <li><strong>耳朵：</strong>帽子必须能盖住耳朵，或额外配备耳罩，耳朵是最容易冻伤的部位</li>
+          <li><strong>暖宝宝：</strong>多带！贴在后背、腹部、鞋底都有效，一天至少准备6-8片</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <span class="card-icon">👶</span>
+      <h3 class="card-title">儿童穿搭 · 特别注意</h3>
+      <div class="card-content">
+        <ul>
+          <li><strong>连体滑雪服：</strong>儿童最佳选择，防风防雪一体式设计，方便活动</li>
+          <li><strong>面部保护：</strong>儿童皮肤更脆弱，必须涂抹防冻霜，面罩保护裸露皮肤</li>
+          <li><strong>户外时间：</strong>儿童户外活动时间建议控制在1-1.5小时内，及时回室内取暖</li>
+          <li><strong>备用衣物：</strong>多备一套干燥的内衣裤，出汗后及时更换避免感冒</li>
+          <li><strong>防滑鞋底：</strong>必须选择带有防滑纹路的厚底鞋，冰面行走安全第一</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ATTRACTIONS -->
+<div class="section-dark">
+<section class="section" id="attractions">
+  <div class="section-header reveal">
+    <span class="section-icon">🏔</span>
+    <h2 class="section-title">景点详细攻略</h2>
+    <p class="section-desc">每个景点的深度解析，帮助您充分体验冰雪魅力</p>
+  </div>
+
+  <!-- Tabs -->
+  <div class="tabs-nav reveal">
+    <button class="tab-btn active" data-tab="tab-harbin">哈尔滨市区</button>
+    <button class="tab-btn" data-tab="tab-snow">中国雪乡</button>
+    <button class="tab-btn" data-tab="tab-yabuli">亚布力滑雪</button>
+    <button class="tab-btn" data-tab="tab-other">其他景点</button>
+  </div>
+
+  <!-- Tab: Harbin City -->
+  <div class="tab-content active" id="tab-harbin">
+
+    <div class="attraction-detail reveal">
+      <div class="attraction-header">
+        <div class="attraction-emoji">🏰</div>
+        <div class="attraction-info">
+          <h3 class="attraction-name">哈尔滨冰雪大世界</h3>
+          <div class="attraction-meta">
+            <span>📍 松北区太阳岛西侧</span>
+            <span>⏰ 11:00-21:30</span>
+            <span>💰 约298元/人</span>
+            <span>⭐ 必去指数：★★★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="attraction-body">
+        <div class="attraction-section">
+          <h4>📖 景点简介</h4>
+          <p>哈尔滨冰雪大世界是世界最大的冰雪主题公园，占地超过80万平方米。每年12月底至次年2月底开放，使用松花江天然冰块打造，融合了冰雕、雪雕、灯光秀等多种艺术形式。2026年的主题更加宏大，冰建筑高度超过40米，是世界级的冰雪艺术盛宴。</p>
+          <h4 style="margin-top:16px">🎯 必玩项目</h4>
+          <ul>
+            <li>超长冰滑梯（521米世界之最，排队约30-60分钟）</li>
+            <li>冰雪摩天轮 — 在冰雪世界中俯瞰全景</li>
+            <li>大型冰雕城堡 — 拍照打卡绝佳地点</li>
+            <li>哈冰秀表演 — 大型冰上杂技演出</li>
+            <li>雪地摩托 — 刺激的雪地驾驶体验</li>
+            <li>冰上自行车 — 适合亲子互动</li>
+          </ul>
+        </div>
+        <div class="attraction-section">
+          <h4>💡 游玩攻略</h4>
+          <ul>
+            <li>建议下午2-3点入园，先玩项目再看夜景灯光</li>
+            <li>大滑梯建议一入园就去排队，越晚人越多</li>
+            <li>园区很大，建议逆时针游览避开人流</li>
+            <li>带好充电宝，低温会让手机快速没电</li>
+            <li>拍照建议：日落时分最美，冰灯亮起后更梦幻</li>
+            <li>防寒贴士：园区内有暖房可休息，每1小时进去暖和一下</li>
+          </ul>
+          <h4 style="margin-top:16px">⏱ 建议游玩时长</h4>
+          <p>4-6小时。建议下午入园，一直玩到晚上看完灯光秀再离开。</p>
+        </div>
+      </div>
+      <div class="attraction-tips">
+        <h4>⚠ 特别提醒</h4>
+        <p>冰雪大世界全程户外，是整个行程中最冷的景点！务必做好全身保暖，特别是脚和手。建议在鞋底贴暖宝宝，多备一对手套。手机用完立刻放回内衣口袋保温。带小朋友的家长注意控制户外时间，适时进暖房休息。</p>
+      </div>
+    </div>
+
+    <div class="attraction-detail reveal">
+      <div class="attraction-header">
+        <div class="attraction-emoji">⛪</div>
+        <div class="attraction-info">
+          <h3 class="attraction-name">圣·索菲亚教堂</h3>
+          <div class="attraction-meta">
+            <span>📍 道里区透笼街88号</span>
+            <span>⏰ 全天开放（外观）</span>
+            <span>💰 免费</span>
+            <span>⭐ 必去指数：★★★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="attraction-body">
+        <div class="attraction-section">
+          <h4>📖 景点简介</h4>
+          <p>圣·索菲亚教堂始建于1907年，是远东地区最大的东正教堂。拜占庭式建筑风格，洋葱头穹顶在白雪覆盖下尤为壮观。教堂内部现为哈尔滨建筑艺术馆，展示哈尔滨的城市建筑历史。冬季的索菲亚教堂被皑皑白雪覆盖，如同童话中的城堡。</p>
+        </div>
+        <div class="attraction-section">
+          <h4>💡 游玩攻略</h4>
+          <ul>
+            <li>白天和夜晚各有风味，建议都去看看</li>
+            <li>夜晚灯光下的教堂更加梦幻，适合拍照</li>
+            <li>广场上常有鸽子和街头表演</li>
+            <li>周围有很多商铺和小吃，可以顺便逛逛</li>
+            <li>距中央大街步行约10分钟，建议一起游览</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="attraction-detail reveal">
+      <div class="attraction-header">
+        <div class="attraction-emoji">🛣</div>
+        <div class="attraction-info">
+          <h3 class="attraction-name">中央大街</h3>
+          <div class="attraction-meta">
+            <span>📍 道里区中央大街</span>
+            <span>⏰ 全天开放</span>
+            <span>💰 免费</span>
+            <span>⭐ 必去指数：★★★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="attraction-body">
+        <div class="attraction-section">
+          <h4>📖 景点简介</h4>
+          <p>中央大街全长1450米，是亚洲最大最长的步行街之一。始建于1898年，汇集了文艺复兴、巴洛克等多种欧式建筑风格。路面由方石铺成，两侧是百年欧式建筑群，冬季装饰着冰雕和灯光，充满浪漫的异国风情。</p>
+          <h4 style="margin-top:16px">🍦 必吃美食</h4>
+          <ul>
+            <li>马迭尔冰棍 — 零下20度吃冰棍是东北特色体验！5元/根</li>
+            <li>马迭尔面包 — 百年老字号，奶香浓郁</li>
+            <li>红肠 — 秋林、商委红肠都值得尝试</li>
+            <li>烤冷面 — 东北经典街头小吃</li>
+          </ul>
+        </div>
+        <div class="attraction-section">
+          <h4>💡 游玩攻略</h4>
+          <ul>
+            <li>建议傍晚去，华灯初上最美</li>
+            <li>从南端防洪纪念塔走到北端最佳</li>
+            <li>两侧的老建筑每栋都有故事，可以慢慢欣赏</li>
+            <li>冬季会有冰雕展览，免费观赏</li>
+            <li>马迭尔冰棍一定要尝，边走边吃是仪式感</li>
+            <li>注意脚下防滑，方石路面结冰后较滑</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="attraction-detail reveal">
+      <div class="attraction-header">
+        <div class="attraction-emoji">🌊</div>
+        <div class="attraction-info">
+          <h3 class="attraction-name">松花江冰上活动</h3>
+          <div class="attraction-meta">
+            <span>📍 道里区松花江畔</span>
+            <span>⏰ 9:00-16:00</span>
+            <span>💰 项目另付</span>
+            <span>⭐ 必去指数：★★★★☆</span>
+          </div>
+        </div>
+      </div>
+      <div class="attraction-body">
+        <div class="attraction-section">
+          <h4>📖 景点简介</h4>
+          <p>每年冬天，松花江冰面厚达数十厘米，成为天然的冰上游乐场。从中央大街步行即可到达，是哈尔滨市民和游客冬季休闲的热门场所。冰面上设有多种娱乐项目，适合全家老少一起玩耍。</p>
+        </div>
+        <div class="attraction-section">
+          <h4>🎯 推荐项目</h4>
+          <ul>
+            <li>冰上自行车 — 30-50元/次，简单有趣</li>
+            <li>狗拉雪橇 — 50-100元/圈，孩子最爱</li>
+            <li>雪地摩托 — 50-80元/圈，速度与激情</li>
+            <li>冰上碰碰车 — 40-60元/次，全家欢乐</li>
+            <li>抽冰尜（陀螺）— 免费体验东北传统</li>
+          </ul>
+        </div>
+      </div>
+      <div class="attraction-tips">
+        <h4>⚠ 安全提醒</h4>
+        <p>务必在安全区域内活动，不要走到未标记的冰面区域。冰面上风大体感温度更低，注意保暖。穿防滑鞋非常重要，冰面极滑。看管好小朋友，避免远离人群区域。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab: Snow Village -->
+  <div class="tab-content" id="tab-snow">
+    <div class="attraction-detail reveal">
+      <div class="attraction-header">
+        <div class="attraction-emoji">🏠</div>
+        <div class="attraction-info">
+          <h3 class="attraction-name">中国雪乡（双峰林场）</h3>
+          <div class="attraction-meta">
+            <span>📍 牡丹江市海林市</span>
+            <span>⏰ 全天</span>
+            <span>💰 门票约120元/人</span>
+            <span>⭐ 必去指数：★★★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="attraction-body">
+        <div class="attraction-section">
+          <h4>📖 景点简介</h4>
+          <p>中国雪乡位于黑龙江省牡丹江市海林市，因其独特的地理位置和气候条件，降雪量大、雪质好、粘度高，形成了独特的"雪蘑菇"景观。房屋屋顶积雪厚度可达2米，形态各异，宛如童话世界。是央视和影视作品取景地。</p>
+          <h4 style="margin-top:16px">🚗 交通方式</h4>
+          <ul>
+            <li>哈尔滨出发：包车/拼车约5-6小时（推荐）</li>
+            <li>客运班车：龙运客运站有直达班车（需提前购票）</li>
+            <li>自驾：需安装防滑链，山路弯多注意安全</li>
+            <li>亚布力中转：可先到亚布力再包车到雪乡（约2-3小时）</li>
+          </ul>
+        </div>
+        <div class="attraction-section">
+          <h4>🎯 必做体验</h4>
+          <ul>
+            <li>雪韵大街漫步 — 雪乡主街，两侧是雪蘑菇和红灯笼</li>
+            <li>梦幻家园 — 最佳拍照点，雪乡标志性景观</li>
+            <li>棒槌山观景台 — 俯瞰整个雪乡全景</li>
+            <li>马拉爬犁 — 传统交通方式，穿越雪原</li>
+            <li>羊草山日出 — 需凌晨4-5点出发，震撼壮丽</li>
+            <li>冰糖葫芦/烤红薯 — 雪乡街头美味</li>
+            <li>篝火晚会 — 体验东北欢乐氛围</li>
+          </ul>
+          <h4 style="margin-top:16px">💡 住宿建议</h4>
+          <p>推荐住在雪韵大街附近的东北火炕民宿，体验传统东北生活。火炕非常暖和，价格约300-800元/晚不等。务必提前预订，旺季房源紧张。</p>
+        </div>
+      </div>
+      <div class="attraction-tips">
+        <h4>⚠ 特别提醒</h4>
+        <p>雪乡海拔较高，体感温度比哈尔滨更低，可达-30°C以下。务必做好最高等级保暖！山路颠簸，晕车的家人提前备好晕车药。雪乡消费水平较高，餐饮和活动项目建议提前了解价格。夜晚拍照注意电池保暖，建议多备一块电池。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab: Yabuli -->
+  <div class="tab-content" id="tab-yabuli">
+    <div class="attraction-detail reveal">
+      <div class="attraction-header">
+        <div class="attraction-emoji">⛷</div>
+        <div class="attraction-info">
+          <h3 class="attraction-name">亚布力滑雪旅游度假区</h3>
+          <div class="attraction-meta">
+            <span>📍 尚志市亚布力镇</span>
+            <span>⏰ 8:00-16:30</span>
+            <span>💰 约200-500元/人</span>
+            <span>⭐ 必去指数：★★★★★</span>
+          </div>
+        </div>
+      </div>
+      <div class="attraction-body">
+        <div class="attraction-section">
+          <h4>📖 景点简介</h4>
+          <p>亚布力是中国最大的综合性滑雪度假区，拥有多条不同难度的雪道，海拔落差高达900米。曾举办亚冬会等国际赛事，设施完善，适合从新手到专业级别的滑雪爱好者。配备完善的教学体系和现代化的索道缆车。</p>
+          <h4 style="margin-top:16px">🎿 雪道选择</h4>
+          <ul>
+            <li><span class="tag tag-green">初级道</span> 坡度5-15° · 适合零基础 · 有教练区</li>
+            <li><span class="tag tag-blue">中级道</span> 坡度15-25° · 有基础可尝试</li>
+            <li><span class="tag tag-coral">高级道</span> 坡度25°+ · 仅限有经验者</li>
+          </ul>
+        </div>
+        <div class="attraction-section">
+          <h4>💡 滑雪攻略</h4>
+          <ul>
+            <li>新手强烈建议请教练（200-400元/2小时）</li>
+            <li>租用装备：雪板+雪鞋+雪杖套装约150-200元</li>
+            <li>穿着：滑雪服（可租）+防水手套+护目镜+头盔</li>
+            <li>先在平地练习刹车和转弯，再上雪道</li>
+            <li>摔倒时向侧面倒，不要向前或向后</li>
+            <li>注意：雪道上不要停留，尤其是弯道和陡坡处</li>
+          </ul>
+          <h4 style="margin-top:16px">⏱ 建议时长</h4>
+          <p>初学者半天即可，体验型游客建议4-5小时。全天滑雪建议中午休息用餐补充体力。</p>
+        </div>
+      </div>
+      <div class="attraction-tips">
+        <h4>⚠ 滑雪安全须知</h4>
+        <p>滑雪属于高风险运动，务必佩戴头盔。儿童必须有成人陪同，建议6岁以上再尝试。初学者不要冒险上中高级雪道。做好热身运动，防止肌肉拉伤。购买意外保险强烈推荐！如果身体疲劳要及时休息，大部分事故发生在体力透支时。</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Tab: Other -->
+  <div class="tab-content" id="tab-other">
+    <div class="cards-grid">
+      <div class="card reveal">
+        <span class="card-icon">☀</span>
+        <h3 class="card-title">太阳岛雪博会</h3>
+        <div class="card-content">
+          <p>太阳岛雪博会是与冰雪大世界齐名的冰雪艺术盛会，以大型雪雕艺术为主。白天游览最佳，雪雕在阳光下晶莹剔透。</p>
+          <ul>
+            <li>门票：约240元/人</li>
+            <li>建议游玩：3-4小时</li>
+            <li>亮点：超大型主题雪雕群</li>
+            <li>与冰雪大世界可买联票更优惠</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card reveal">
+        <span class="card-icon">🐅</span>
+        <h3 class="card-title">东北虎林园</h3>
+        <div class="card-content">
+          <p>世界最大的东北虎繁殖饲养基地，拥有1000多只东北虎。乘坐特制观光车近距离观赏东北虎的野性之美。</p>
+          <ul>
+            <li>门票：约130元/人（含观光车）</li>
+            <li>建议游玩：2-3小时</li>
+            <li>最佳：上午虎更活跃</li>
+            <li>自费项目：喂食体验</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card reveal">
+        <span class="card-icon">🏛</span>
+        <h3 class="card-title">哈尔滨极地馆</h3>
+        <div class="card-content">
+          <p>世界首座极地演艺游乐园，可观赏北极熊、企鹅、白鲸等极地动物，白鲸表演是一大亮点。室内场馆，适合全家避寒。</p>
+          <ul>
+            <li>门票：约200元/人</li>
+            <li>建议游玩：3-4小时</li>
+            <li>亮点：白鲸海之恋表演</li>
+            <li>室内恒温，休息好去处</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card reveal">
+        <span class="card-icon">🏗</span>
+        <h3 class="card-title">防洪纪念塔</h3>
+        <div class="card-content">
+          <p>位于中央大街尽头，松花江畔。纪念哈尔滨人民战胜1957年大洪水的丰碑。冬季站在这里可以看到冰封的松花江全景。</p>
+          <ul>
+            <li>门票：免费</li>
+            <li>建议游玩：30分钟</li>
+            <li>搭配中央大街一起游览</li>
+            <li>拍摄松花江冰面全景好位置</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- SKIING GUIDE -->
+<section class="section" id="skiing">
+  <div class="section-header reveal">
+    <span class="section-icon">⛷</span>
+    <h2 class="section-title">滑雪专项指南</h2>
+    <p class="section-desc">从零基础到安全享受滑雪乐趣的完全手册</p>
+  </div>
+
+  <div class="accordion reveal">
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <span>🎿 滑雪装备清单与选择</span>
+        <span class="accordion-arrow">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-body-inner">
+          <p><strong style="color:var(--color-ice-blue)">必备装备：</strong></p>
+          <p>① <strong>滑雪服</strong>（上下分体或连体均可）— 防水指数≥10000mm，透气指数≥5000g。建议租用雪场的，省去携带麻烦。颜色选鲜艳的，方便在雪道上被识别。</p>
+          <p>② <strong>雪鞋</strong> — 租用时要试好尺码，不能太松也不能太紧。穿一双薄袜子试穿，扣紧后脚趾能轻微活动为佳。</p>
+          <p>③ <strong>雪板</strong> — 初学者选择身高减去10-15cm长度的雪板。双板比单板容易入门。</p>
+          <p>④ <strong>头盔</strong> — 必须佩戴！这是保命装备，不要嫌麻烦。</p>
+          <p>⑤ <strong>护目镜/雪镜</strong> — 防止雪盲和紫外线伤害，也能防风。</p>
+          <p>⑥ <strong>防水手套</strong> — 滑雪专用手套，摔倒时手会接触雪面。</p>
+          <p style="margin-top:12px"><strong style="color:var(--color-gold)">可选装备：</strong>护膝、护臀（初学者强烈推荐！摔屁股很疼）、面罩/围脖、防晒霜（雪地紫外线很强）。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <span>📐 新手入门技巧</span>
+        <span class="accordion-arrow">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-body-inner">
+          <p><strong style="color:var(--color-ice-blue)">基本姿势（犁式/Pizza姿势）：</strong></p>
+          <p>① 双脚与肩同宽站立，膝盖微曲，身体微微前倾</p>
+          <p>② 雪板前端靠拢（呈内八字/三角形/Pizza形状）</p>
+          <p>③ 重心放在两脚之间偏前，不要后仰</p>
+          <p>④ 手臂自然下垂握住雪杖，不要高举</p>
+          <p style="margin-top:12px"><strong style="color:var(--color-ice-blue)">刹车方法：</strong></p>
+          <p>将雪板后端向外推开，加大内八字角度，同时膝盖内扣加压。越大的角度制动力越强。</p>
+          <p style="margin-top:12px"><strong style="color:var(--color-ice-blue)">转弯方法：</strong></p>
+          <p>想往左转：重心移到右脚，右脚雪板内侧加压。想往右转：重心移到左脚。记住口诀：<strong>"想去哪边压对边"</strong>。</p>
+          <p style="margin-top:12px"><strong style="color:var(--color-gold)">摔倒技巧：</strong></p>
+          <p>感觉要摔倒时，降低重心蹲下，向侧方倒下。千万不要向前扑或向后仰！侧摔最安全。摔倒后不要立刻站起来，先确认后方无人再起身。</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <span>🛡 滑雪安全规则</span>
+        <span class="accordion-arrow">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-body-inner">
+          <p><strong style="color:var(--color-coral)">十大安全守则：</strong></p>
+          <p>① 必须佩戴头盔，这是不可商量的底线</p>
+          <p>② 量力而行，初学者绝对不要上中高级道</p>
+          <p>③ 雪道上方的人有义务避让下方的人</p>
+          <p>④ 不要在雪道中间停留，停留请靠边</p>
+          <p>⑤ 超车时保持安全距离，从下方人的左右两侧通过</p>
+          <p>⑥ 使用缆车/魔毯时注意听从工作人员指挥</p>
+          <p>⑦ 感觉疲劳立即休息，大部分事故发生在体力不支时</p>
+          <p>⑧ 不要佩戴围巾等容易被缆车/设施缠绕的物品</p>
+          <p>⑨ 儿童必须有成人全程陪同，建议使用安全绳</p>
+          <p>⑩ 购买旅游意外保险，包含滑雪等高风险运动的险种</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <span>👨‍👩‍👧‍👦 亲子滑雪特别提醒</span>
+        <span class="accordion-arrow">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-body-inner">
+          <p><strong style="color:var(--color-ice-blue)">年龄建议：</strong></p>
+          <p>3-5岁：建议只玩雪圈/雪地玩耍，不建议正式滑雪</p>
+          <p>6-8岁：可尝试初级道，必须请教练，时间控制在1小时内</p>
+          <p>9岁以上：可正常参加初级教学课程</p>
+          <p style="margin-top:12px"><strong style="color:var(--color-ice-blue)">注意事项：</strong></p>
+          <p>① 儿童雪具要选择合适尺码，宁可小一号也不要大</p>
+          <p>② 全程佩戴头盔和护目镜</p>
+          <p>③ 家长不要自己教孩子，请专业儿童教练</p>
+          <p>④ 多休息、多喝热水，防止脱水和体力透支</p>
+          <p>⑤ 准备好零食和热饮，随时补充能量</p>
+          <p>⑥ 不要强迫孩子，如果害怕就暂停，保持愉快心情最重要</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <div class="accordion-header">
+        <span>💰 滑雪费用参考</span>
+        <span class="accordion-arrow">▼</span>
+      </div>
+      <div class="accordion-body">
+        <div class="accordion-body-inner">
+          <p><strong>亚布力滑雪度假区（2026参考价）：</strong></p>
+          <p>初级道半天票：约200-280元/人</p>
+          <p>全天通票：约380-500元/人</p>
+          <p>装备租赁：约150-200元/套</p>
+          <p>教练费用：约200-400元/2小时（一对一）</p>
+          <p>储物柜：约20-30元/个</p>
+          <p style="margin-top:12px"><strong>省钱技巧：</strong>①提前在OTA平台购买套票更便宜 ②选择工作日前往人少价低 ③一家人可以请一位教练轮流教学 ④自带手套、护目镜等小件装备</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOD -->
+<div class="section-dark">
+<section class="section" id="food">
+  <div class="section-header reveal">
+    <span class="section-icon">🍲</span>
+    <h2 class="section-title">东北美食推荐</h2>
+    <p class="section-desc">来东北，不仅看冰雪，更要尝遍地道东北味</p>
+  </div>
+  <div class="cards-grid">
+    <div class="card reveal">
+      <span class="card-icon">🥘</span>
+      <h3 class="card-title">铁锅炖</h3>
+      <div class="card-content">
+        <p>东北最具代表性的美食！大铁锅架在灶台上，锅边贴着玉米面饼子，锅里炖着各种食材。</p>
+        <ul>
+          <li><strong>铁锅炖大鹅</strong> — 最经典，鹅肉入味，贴饼子吸满汤汁</li>
+          <li><strong>铁锅炖鱼</strong> — 松花江开江鱼，鲜美无比</li>
+          <li><strong>铁锅炖排骨</strong> — 配上酸菜粉条，东北灵魂组合</li>
+          <li>人均：80-150元</li>
+          <li>推荐：老六杀猪菜、铁锅炖鱼村</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card reveal">
+      <span class="card-icon">🥟</span>
+      <h3 class="card-title">东北饺子</h3>
+      <div class="card-content">
+        <p>东北人的灵魂主食，皮薄馅大，个头是南方饺子的两倍。</p>
+        <ul>
+          <li><strong>酸菜猪肉</strong> — 东北第一馅料，酸爽开胃</li>
+          <li><strong>猪肉大葱</strong> — 经典中的经典</li>
+          <li><strong>三鲜馅</strong> — 虾仁鲜美</li>
+          <li>人均：30-60元</li>
+          <li>推荐：老昌春饼、东方饺子王</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card reveal">
+      <span class="card-icon">🍖</span>
+      <h3 class="card-title">东北烧烤</h3>
+      <div class="card-content">
+        <p>东北烧烤豪迈大气，分量十足，是夜生活必不可少的一部分。</p>
+        <ul>
+          <li><strong>烤串</strong> — 牛肉、羊肉、鸡翅，蘸干料</li>
+          <li><strong>烤冷面</strong> — 街头小吃之王</li>
+          <li><strong>锅包肉</strong> — 外酥里嫩，酸甜口</li>
+          <li>人均：60-120元</li>
+          <li>推荐：路边摊反而最正宗</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card reveal">
+      <span class="card-icon">🍦</span>
+      <h3 class="card-title">冰雪特色小吃</h3>
+      <div class="card-content">
+        <p>只有在零下20度的东北才能享受的独特体验！</p>
+        <ul>
+          <li><strong>马迭尔冰棍</strong> — 中央大街必吃，5元/根</li>
+          <li><strong>冻梨/冻柿子</strong> — 东北传统冻水果，冰沙口感</li>
+          <li><strong>糖葫芦</strong> — 东北的糖葫芦更大更甜</li>
+          <li><strong>粘豆包</strong> — 软糯香甜的传统点心</li>
+          <li>冬天室外就是天然冰箱！</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- SAFETY -->
+<section class="section" id="safety">
+  <div class="section-header reveal">
+    <span class="section-icon">🛡</span>
+    <h2 class="section-title">冬季东北安全须知</h2>
+    <p class="section-desc">了解这些注意事项，让旅行安全又舒心</p>
+  </div>
+
+  <div class="cards-grid">
+    <div class="card reveal">
+      <span class="card-icon">🥶</span>
+      <h3 class="card-title">防冻伤指南</h3>
+      <div class="card-content">
+        <ul>
+          <li>裸露皮肤在-20°C下15分钟内可能冻伤</li>
+          <li>脸部、耳朵、手指、脚趾是高危部位</li>
+          <li>出现发白/发硬/麻木感立即进室内</li>
+          <li>冻伤后用温水（38-42°C）缓慢复温，切勿搓揉</li>
+          <li>切勿用火烤或热水烫冻伤部位</li>
+          <li>每30-60分钟检查孩子的面部和手脚情况</li>
+          <li>外出前涂抹防冻霜，嘴唇涂润唇膏</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card reveal">
+      <span class="card-icon">📱</span>
+      <h3 class="card-title">电子设备保护</h3>
+      <div class="card-content">
+        <ul>
+          <li>手机在低温下电量会骤降甚至关机</li>
+          <li>不用时放在贴身口袋里保温</li>
+          <li>准备2个以上充电宝，也放在贴身处</li>
+          <li>拍照时快速操作，拍完立刻收回衣内</li>
+          <li>相机/微单更耐寒，摄影爱好者可携带</li>
+          <li>进入温暖室内不要立刻使用手机（会起雾）</li>
+          <li>等手机慢慢回温后再操作</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card reveal">
+      <span class="card-icon">🚗</span>
+      <h3 class="card-title">交通安全</h3>
+      <div class="card-content">
+        <ul>
+          <li>路面积雪结冰，走路要小步慢走（企鹅步）</li>
+          <li>穿防滑鞋底的鞋，或给鞋底加防滑钉</li>
+          <li>自驾必须安装雪地轮胎/防滑链</li>
+          <li>包车选择有经验的本地司机</li>
+          <li>大雪天气可能封路，行程保持弹性</li>
+          <li>打车用APP叫车，避免被宰</li>
+          <li>哈尔滨市内交通便利，地铁+打车即可</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card reveal">
+      <span class="card-icon">💊</span>
+      <h3 class="card-title">健康与急救</h3>
+      <div class="card-content">
+        <ul>
+          <li>室内外温差大（可达50°C），注意增减衣物</li>
+          <li>东北室内暖气非常足，注意补水防干燥</li>
+          <li>备好感冒药、肠胃药、创可贴</li>
+          <li>高热量食物帮助抗寒（巧克力、坚果随身带）</li>
+          <li>饮食偏油腻，肠胃不适及时调整</li>
+          <li>保持充足睡眠，寒冷天气更消耗体力</li>
+          <li>买好旅游意外保险，包含滑雪等高风险项目</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card reveal">
+      <span class="card-icon">💡</span>
+      <h3 class="card-title">实用小贴士</h3>
+      <div class="card-content">
+        <ul>
+          <li>金属物品（钥匙/手机支架）放口袋里，手直接触碰会粘皮肤</li>
+          <li>眼镜起雾：进室内前取下眼镜，或用防雾喷剂</li>
+          <li>室外不要舔金属物品（认真的！）</li>
+          <li>保湿很重要：面霜+润唇膏+护手霜随身携带</li>
+          <li>拍照建议穿亮色衣服，白雪背景下更好看</li>
+          <li>现金少带，手机支付普遍（但注意手机保暖）</li>
+          <li>哈尔滨人热情好客，有困难可以找当地人帮忙</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card reveal">
+      <span class="card-icon">🧳</span>
+      <h3 class="card-title">行李打包建议</h3>
+      <div class="card-content">
+        <ul>
+          <li>行李箱选择硬壳的（软壳在搬运中可能冻硬变形）</li>
+          <li>衣物按"每天一套内衣+通用外层"原则打包</li>
+          <li>液体物品注意防冻（化妆品、洗护用品）</li>
+          <li>暖宝宝多带！一天6-8片 × 天数</li>
+          <li>保温杯必备，随时喝热水</li>
+          <li>密封袋装换洗衣物，防潮很重要</li>
+          <li>一个小背包用于每天出行装暖宝宝/充电宝/零食</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CHECKLIST -->
+<div class="section-dark">
+<section class="section" id="checklist">
+  <div class="section-header reveal">
+    <span class="section-icon">✅</span>
+    <h2 class="section-title">行前准备清单</h2>
+    <p class="section-desc">点击勾选已准备的物品，确保万无一失</p>
+  </div>
+  <div class="checklist reveal" id="checklistContainer">
+    <div class="checklist-category">
+      <div class="checklist-cat-title">👗 衣物类</div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">长款羽绒服（过膝，充绒量≥250g）</span></div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">保暖内衣套装 × 3套</span></div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">加厚毛衣/抓绒衣 × 2件</span></div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">防水雪地靴（防滑底）</span></div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">羊毛袜 × 4双</span></div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">防水滑雪手套</span></div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">触屏薄手套（拍照用）</span></div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">毛线帽/雷锋帽（遮耳）</span></div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">围巾/面罩</span></div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">儿童连体滑雪服</span></div>
+    </div>
+    <div class="checklist-category">
+      <div class="checklist-cat-title">🎒 装备类</div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">暖宝宝（至少40片以上）</span></div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">充电宝 × 2个</span></div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">保温杯</span></div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">护目镜/墨镜（防雪盲）</span></div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">防滑鞋钉/冰爪</span></div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">小背包（日常出行用）</span></div>
+    </div>
+    <div class="checklist-category">
+      <div class="checklist-cat-title">💊 护理与药品</div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">防冻霜/保湿面霜</span></div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">润唇膏</span></div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">护手霜</span></div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">防晒霜（雪地紫外线强）</span></div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">感冒药/退烧药</span></div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">肠胃药</span></div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">创可贴</span></div>
+    </div>
+    <div class="checklist-category">
+      <div class="checklist-cat-title">📄 证件与其他</div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">身份证（全家）</span></div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">旅游意外保险</span></div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">酒店/机票预订确认单</span></div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">现金（少量备用）</span></div>
+      <div class="checklist-item" onclick="toggleCheck(this)"><div class="checklist-box">✓</div><span class="checklist-text">高热量零食（巧克力/坚果/能量棒）</span></div>
+    </div>
+    <div class="checklist-progress">
+      <div class="progress-text" id="progressText">已准备 0 / 28 项</div>
+      <div class="progress-bar-bg"><div class="progress-bar-fill" id="progressBar"></div></div>
+    </div>
+  </div>
+</section>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p class="footer-text">
+    ❄ 哈尔滨 · 雪乡 冬季家庭旅行完全攻略 ❄<br>
+    用 <span class="footer-heart">♥</span> 为全家精心制作 · 2026年2月<br>
+    <span style="opacity:0.5;font-size:0.8rem">祝旅途愉快，一路平安！</span>
+  </p>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
+
+<!-- JAVASCRIPT -->
+<script>
+// Snowfall
+(function(){
+  const c=document.getElementById('snowflakes');
+  const flakes=['❄','❅','❆','✦','·'];
+  for(let i=0;i<35;i++){
+    const s=document.createElement('div');
+    s.className='snowflake';
+    s.textContent=flakes[Math.floor(Math.random()*flakes.length)];
+    s.style.left=Math.random()*100+'%';
+    s.style.animationDuration=(5+Math.random()*10)+'s';
+    s.style.animationDelay=Math.random()*10+'s';
+    s.style.fontSize=(0.5+Math.random()*1.2)+'rem';
+    s.style.opacity=0.3+Math.random()*0.5;
+    c.appendChild(s);
+  }
+})();
+
+// Nav scroll effect
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{
+  nav.classList.toggle('scrolled',window.scrollY>50);
+  document.getElementById('backToTop').classList.toggle('show',window.scrollY>600);
+});
+
+// Mobile nav toggle
+document.getElementById('navToggle').addEventListener('click',()=>{
+  document.getElementById('navLinks').classList.toggle('open');
+});
+document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{
+  document.getElementById('navLinks').classList.remove('open');
+}));
+
+// Tabs
+document.querySelectorAll('.tab-btn').forEach(btn=>{
+  btn.addEventListener('click',()=>{
+    document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
+    btn.classList.add('active');
+    document.getElementById(btn.dataset.tab).classList.add('active');
+  });
+});
+
+// Accordion
+document.querySelectorAll('.accordion-header').forEach(h=>{
+  h.addEventListener('click',()=>{
+    const item=h.parentElement;
+    const body=item.querySelector('.accordion-body');
+    const inner=body.querySelector('.accordion-body-inner');
+    const isOpen=item.classList.contains('open');
+    // Close all
+    document.querySelectorAll('.accordion-item').forEach(i=>{
+      i.classList.remove('open');
+      i.querySelector('.accordion-body').style.maxHeight='0';
+    });
+    if(!isOpen){
+      item.classList.add('open');
+      body.style.maxHeight=inner.scrollHeight+40+'px';
+    }
+  });
+});
+
+// Checklist
+function toggleCheck(el){
+  el.classList.toggle('checked');
+  updateProgress();
+}
+function updateProgress(){
+  const total=document.querySelectorAll('.checklist-item').length;
+  const checked=document.querySelectorAll('.checklist-item.checked').length;
+  document.getElementById('progressText').textContent='已准备 '+checked+' / '+total+' 项';
+  document.getElementById('progressBar').style.width=(checked/total*100)+'%';
+}
+
+// Scroll reveal
+const observer=new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');}});
+},{threshold:0.1});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+</script>
+</body>
+</html>
