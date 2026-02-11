@@ -127,6 +127,18 @@ body {
   font-size: clamp(1rem, 2vw, 1.3rem); color: rgba(232,244,253,0.7);
   font-weight: 300; margin-bottom: 40px; line-height: 1.8;
 }
+.family-members {
+  display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 28px; margin-bottom: 8px;
+}
+.family-member {
+  display: inline-flex; align-items: center; gap: 6px; padding: 8px 20px; border-radius: 30px;
+  background: rgba(255,215,0,0.1); border: 1px solid rgba(255,215,0,0.25);
+  font-family: var(--font-display); font-size: 1rem; font-weight: 600; color: var(--color-gold);
+  transition: var(--transition-smooth); cursor: default;
+}
+.family-member:hover { background: rgba(255,215,0,0.2); transform: translateY(-2px); }
+.family-member .member-icon { font-size: 1.1rem; }
+.family-label { font-size: 0.9rem; color: rgba(232,244,253,0.5); margin-top: 16px; letter-spacing: 2px; }
 .hero-stats {
   display: flex; gap: 40px; justify-content: center; flex-wrap: wrap; margin-top: 40px;
 }
@@ -412,6 +424,15 @@ body {
       一份为全家精心准备的东北冬季出行完全攻略<br>
       涵盖穿衣保暖、景点游玩、滑雪技巧、美食推荐与安全须知
     </p>
+    <div class="family-label">全家出动</div>
+    <div class="family-members">
+      <div class="family-member"><span class="member-icon">👨</span>东东</div>
+      <div class="family-member"><span class="member-icon">👩</span>芳芳</div>
+      <div class="family-member"><span class="member-icon">👦</span>宇儿</div>
+      <div class="family-member"><span class="member-icon">👧</span>子子</div>
+      <div class="family-member"><span class="member-icon">🧸</span>小熊</div>
+      <div class="family-member"><span class="member-icon">👶</span>睿睿</div>
+    </div>
     <div class="hero-stats">
       <div class="hero-stat">
         <div class="hero-stat-value">-20°C</div>
@@ -1213,7 +1234,7 @@ body {
 <footer class="footer">
   <p class="footer-text">
     ❄ 哈尔滨 · 雪乡 冬季家庭旅行完全攻略 ❄<br>
-    用 <span class="footer-heart">♥</span> 为全家精心制作 · 2026年2月<br>
+    由东东用 <span class="footer-heart">♥</span> 为全家精心制作 · 2026年2月<br>
     <span style="opacity:0.5;font-size:0.8rem">祝旅途愉快，一路平安！</span>
   </p>
 </footer>
